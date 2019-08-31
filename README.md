@@ -11,3 +11,10 @@ Getting started with pypy (Python 3.6)  and matplotlib in Windows 10
 - test if pip is working correctly by using `pypy3 -m pip install -U pip`
   (you should see something like `Requirement already up-to-date: pip in .\site-packages (19.2.3)`
   
+
+Now to install `matplotlib` you need a couple of prerequisites:
+
+- Visual Studio 2019 with C++ Desktop
+
+If Visual studio is not installed or you are not running from a x86 (32-bit) command line, you will see:
+`RuntimeError: Broken toolchain: cannot link a simple C program`
