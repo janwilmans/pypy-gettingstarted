@@ -14,7 +14,7 @@ Getting started with pypy (Python 3.6)  and matplotlib in Windows 10
 
 Now to install `matplotlib` you need a couple of prerequisites:
 
-- Visual Studio 2019 with C++ Desktop
+- Install Visual Studio 2019 with the `Desktop development with C++` workload
 - `wget https://github.com/ubawurinna/freetype-windows-binaries/releases/download/v2.10.1/freetype.zip`
 
 If Visual studio is not installed or you are not running from a x86 (32-bit) command line, you will see:
