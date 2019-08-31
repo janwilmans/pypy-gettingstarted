@@ -15,9 +15,12 @@ Getting started with pypy (Python 3.6)  and matplotlib in Windows 10
 Now to install `matplotlib` you need a couple of prerequisites:
 
 - Visual Studio 2019 with C++ Desktop
+- `wget https://github.com/ubawurinna/freetype-windows-binaries/releases/download/v2.10.1/freetype.zip`
 
 If Visual studio is not installed or you are not running from a x86 (32-bit) command line, you will see:
 `RuntimeError: Broken toolchain: cannot link a simple C program`
+
+Put the content of `freetype.zip` in c:\pypy\include 
 
 Start the correct developer command prompt by looking for `x86 Native Tools Command Prompt for VS 2019` in the start menu.
 
