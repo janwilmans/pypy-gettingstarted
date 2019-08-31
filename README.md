@@ -21,3 +21,4 @@ If Visual studio is not installed or you are not running from a x86 (32-bit) com
 
 Start the correct developer command prompt by looking for `x86 Native Tools Command Prompt for VS 2019` in the start menu.
 
+- then enter `pypy3 -m pip install matplotlib`
