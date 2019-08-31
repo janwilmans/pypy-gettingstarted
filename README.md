@@ -5,5 +5,7 @@ Getting started with pypy (Python 3.6)  and matplotlib in Windows 10
 - download [wget](https://eternallybored.org/misc/wget/) from https://eternallybored.org/misc/wget/1.20.3/64/wget.exe and save it as `c:\pypy\wget.exe`
 - open a command line, using Win-R, cmd.exe <enter>, and type `pushd c:\pypy` <enter>
 - then `wget http://bootstrap.pypa.io/get-pip.py` as per instructions at https://pip.pypa.io/en/stable/installing/
-- also `wget https://bitbucket.org/pypy/pypy/downloads/pypy2.7-v7.1.1-win32.zip` 
-- put the content of pypy2.7-v7.1.1-win32.zip directly into `c:\pypy` so you have `c:\pypy\pypy.exe`
+- also `wget https://bitbucket.org/pypy/pypy/downloads/pypy3.6-v7.1.1-win32.zip` 
+- put the content of pypy3.6-v7.1.1-win32.zip directly into `c:\pypy` so you have `c:\pypy\pypy.exe`
+- then execute `pypy.exe get-pip.py`
+  
