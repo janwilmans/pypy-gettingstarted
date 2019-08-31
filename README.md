@@ -27,3 +27,13 @@ Start the correct developer command prompt by looking for `x86 Native Tools Comm
 
 - setup the environment using `"%VS140COMNTOOLS%\vsvars32.bat"`
 - then enter `pypy3 -m pip install matplotlib`
+
+result:
+
+```
+ LINK : fatal error LNK1181: cannot open input file 'z.lib'
+```
+
+* TODO * find out how to continue.
+see https://github.com/matplotlib/matplotlib/issues/15160
+
