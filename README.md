@@ -26,7 +26,7 @@ Start the correct developer command prompt by looking for `x86 Native Tools Comm
 - git clone https://github.com/matplotlib/matplotlib
 - git clone https://github.com/jbmohler/matplotlib-winbuild
 - edit matplotlib-winbuild\utils.py on line 61 put: `msvc.find_vcvarsall(14.0 if VS2010 else 9.0)` (so change 10.0 -> 14.0)
-- pypy3 matplotlib-winbuild\buildall.py
+- pypy3 matplotlib-winbuild\buildall.py (note: many error message will be reported, but let it finish)
 - (it fails, this was expected, but its required to let it fail the first time!)
 - copy the generated matplotlib-winbuild\build\msvcr100-x32\zlib.lib to matplotlib-winbuild\build\msvcr100-x32\zlibstatic.lib
 - Put the content of `freetype.zip` in C:\pypy\matplotlib-winbuild\build\msvcr100-x32, so you have `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype.lib` and a directory `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype`.
@@ -37,4 +37,16 @@ Finally check with:
 
 - `pypy3 -m pip install matplotlib`
 
-that matplotlib is now installed. 
+that matplotlib is now installed. If all went well, you will see something like:
+
+```
+c:\pypy3>pypy3 -m pip install matplotlib
+Requirement already satisfied: matplotlib in .\site-packages\matplotlib-3.1.1+2030.gb3fadcb90-py3.6-win32.egg (3.1.1+2030.gb3fadcb90)
+Requirement already satisfied: cycler>=0.10 in .\site-packages\cycler-0.10.0-py3.6.egg (from matplotlib) (0.10.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in .\site-packages\kiwisolver-1.1.0-py3.6-win32.egg (from matplotlib) (1.1.0)
+Requirement already satisfied: numpy>=1.11 in .\matplotlib\.eggs\numpy-1.17.1-py3.6-win32.egg (from matplotlib) (1.17.1)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in .\site-packages\pyparsing-2.4.2-py3.6.egg (from matplotlib) (2.4.2)
+Requirement already satisfied: python-dateutil>=2.1 in .\site-packages\python_dateutil-2.8.0-py3.6.egg (from matplotlib) (2.8.0)
+Requirement already satisfied: six in .\site-packages\six-1.12.0-py3.6.egg (from cycler>=0.10->matplotlib) (1.12.0)
+Requirement already satisfied: setuptools in .\site-packages (from kiwisolver>=1.0.1->matplotlib) (41.2.0)
+```
