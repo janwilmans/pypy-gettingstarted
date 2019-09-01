@@ -20,20 +20,18 @@ Now to install `matplotlib` you need a couple of prerequisites:
 If Visual studio is not installed or you are not running from a x86 (32-bit) command line, you will see:
 `RuntimeError: Broken toolchain: cannot link a simple C program`
 
-- Put the content of `freetype.zip` in c:\pypy\include, so you have `C:\pypy\include\ft2build.h` and a directory `C:\pypy\include\freetype`.
-- copy win32\freetype.lib from `freetype.zip` into C:\pypy\libs\freetype.lib
-
 Start the correct developer command prompt by looking for `x86 Native Tools Command Prompt for VS 2019` in the start menu.
 
 - setup the environment using `"%VS140COMNTOOLS%\vsvars32.bat"`
+- git clone https://github.com/matplotlib/matplotlib
+- git clone https://github.com/jbmohler/matplotlib-winbuild
+- edit matplotlib-winbuild\utils.py on line 61 put: `msvc.find_vcvarsall(14.0 if VS2010 else 9.0)` (so change 10.0 -> 14.0)
+- pypy3 matplotlib-winbuild\buildall.py
+- (it fails, this was expected, but its required to let it fail the first time!)
+- Put the content of `freetype.zip` in C:\pypy\matplotlib-winbuild\build\msvcr100-x32, so you have `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype.lib` and a directory `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype`.
+
+Check with: 
+
 - then enter `pypy3 -m pip install matplotlib`
 
-result:
-
-```
- LINK : fatal error LNK1181: cannot open input file 'z.lib'
-```
-
-* TODO * find out how to continue.
-see https://github.com/matplotlib/matplotlib/issues/15160
-
+That matplotlib is now installed. 
