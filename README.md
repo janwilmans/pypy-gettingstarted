@@ -31,7 +31,7 @@ Start the correct developer command prompt by looking for `x86 Native Tools Comm
 - copy the generated matplotlib-winbuild\build\msvcr100-x32\zlib.lib to matplotlib-winbuild\build\msvcr100-x32\zlibstatic.lib
 - Put the content of `freetype.zip` in C:\pypy\matplotlib-winbuild\build\msvcr100-x32, so you have `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype.lib` and a directory `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype`.
 - run `pypy3 matplotlib-winbuild\buildall.py` again
-- if it fails with an 'already in use' error, just run it again!
+- if it fails with an 'The process cannot access the file because it is being used by another process' error, just run it again!
 
 Finally check with: 
 
