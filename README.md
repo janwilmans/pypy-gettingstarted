@@ -50,3 +50,9 @@ Requirement already satisfied: python-dateutil>=2.1 in .\site-packages\python_da
 Requirement already satisfied: six in .\site-packages\six-1.12.0-py3.6.egg (from cycler>=0.10->matplotlib) (1.12.0)
 Requirement already satisfied: setuptools in .\site-packages (from kiwisolver>=1.0.1->matplotlib) (41.2.0)
 ```
+
+## Futher runtime problems:
+
+https://stackoverflow.com/questions/56826170/value-error-invalid-argument-with-pypy-when-importing-pandas-and-plotly
+
+
