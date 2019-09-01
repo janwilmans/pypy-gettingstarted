@@ -28,6 +28,7 @@ Start the correct developer command prompt by looking for `x86 Native Tools Comm
 - edit matplotlib-winbuild\utils.py on line 61 put: `msvc.find_vcvarsall(14.0 if VS2010 else 9.0)` (so change 10.0 -> 14.0)
 - pypy3 matplotlib-winbuild\buildall.py
 - (it fails, this was expected, but its required to let it fail the first time!)
+- copy the generated matplotlib-winbuild\build\msvcr100-x32\zlib.lib to matplotlib-winbuild\build\msvcr100-x32\zlibstatic.lib
 - Put the content of `freetype.zip` in C:\pypy\matplotlib-winbuild\build\msvcr100-x32, so you have `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype.lib` and a directory `C:\pypy\matplotlib-winbuild\build\msvcr100-x32\freetype`.
 
 Check with: 
